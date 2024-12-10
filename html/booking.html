@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parcel Booking</title>
+    <link rel="stylesheet" href="../css/booking.css">
+</head>
+<body>
+    <div class="topbar">
+       <h2>Parcel Booking</h2>
+    </div>
+
+    <div class="booking-container">
+        <form id="bookingForm">
+
+            <div class="form-left">
+                <!-- Sender Information (Pre-populated) -->
+                <fieldset class="fieldset">
+                    <legend>Sender Information</legend>
+                    <label for="senderName">Name:</label>
+                    <input type="text" id="senderName" value="John Doe" readonly>
+
+                    <label for="senderAddress">Address:</label>
+                    <input type="text" id="senderAddress" value="123 Main St, City, Country" readonly>
+
+                    <label for="senderContact">Contact Details:</label>
+                    <input type="text" id="senderContact" value="+1234567890" readonly>
+                </fieldset>
+
+                <!-- Receiver Information -->
+                <fieldset class="fieldset">
+                    <legend>Receiver Information</legend>
+                    <label for="receiverName">Name:</label>
+                    <input type="text" id="receiverName" required>
+
+                    <label for="receiverAddress">Address:</label>
+                    <input type="text" id="receiverAddress" required>
+
+                    <label for="receiverPin">Pin Code:</label>
+                    <input type="text" id="receiverPin" required>
+
+                    <label for="receiverContact">Contact Details:</label>
+                    <input type="text" id="receiverContact" required>
+                </fieldset>
+
+                  <!-- Service Cost and Payment -->
+                  <fieldset class="fieldset">
+                    <legend>Service Cost and Payment</legend>
+                    <label for="serviceCost">Service Cost: $</label>
+                    <input type="number" id="serviceCost" value="50" readonly>
+
+                    <label for="paymentMethod">Payment Method:</label>
+                    <select id="paymentMethod" required>
+                        <option value="credit-card">Credit Card</option>
+                        <option value="paypal">PayPal</option>
+                        <option value="bank-transfer">Bank Transfer</option>
+                    </select>
+                </fieldset>
+            </div>
+
+            <div class="form-right">
+                <!-- Parcel Details -->
+                <fieldset class="fieldset">
+                    <legend>Parcel Details</legend>
+                    <label for="parcelSize">Size and Weight:</label>
+                    <input type="text" id="parcelSize" placeholder="Size and weight of the parcel" required>
+
+                    <label for="parcelContents">Contents Description:</label>
+                    <textarea id="parcelContents" placeholder="Provide a description of the parcel contents" required></textarea>
+                </fieldset>
+
+                <!-- Shipping Options -->
+                <fieldset class="fieldset">
+                    <legend>Shipping Options</legend>
+                    <label for="deliverySpeed">Choose Delivery Speed:</label>
+                    <select id="deliverySpeed" required>
+                        <option value="standard">Standard</option>
+                        <option value="express">Express</option>
+                        <option value="overnight">Overnight</option>
+                    </select>
+
+                    <label for="packaging">Select Packaging Preferences:</label>
+                    <select id="packaging" required>
+                        <option value="standard">Standard Packaging</option>
+                        <option value="custom">Custom Packaging</option>
+                        <option value="eco-friendly">Eco-friendly Packaging</option>
+                        <option value="fragile">Fragile Item Handling</option>
+                    </select>
+                </fieldset>
+
+                <!-- Date and Time Selection -->
+                <fieldset class="fieldset">
+                    <legend>Date and Time Selection</legend>
+                    <label for="pickupDate">Preferred Pickup Date:</label>
+                    <input type="date" id="pickupDate" required>
+
+                    <label for="pickupTime">Preferred Pickup Time:</label>
+                    <input type="time" id="pickupTime" required>
+                </fieldset>
+
+              
+
+                <button type="submit">Book Parcel</button>
+            </div>
+
+        </form>
+
+        <div id="confirmation" style="display: none;">
+            <h3>Booking Successful</h3>
+            <p>Your booking has been successfully processed.</p>
+        </div>
+    </div>
+
+    <script src="../js/booking.js"></script>
+</body>
+</html>

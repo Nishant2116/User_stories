@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Registration Screen</title>
+    <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+</head>
+<body>
+    <div class="registration-container">
+        <h2>Register</h2>
+        <form id="registrationForm">
+            <div class="form-section">
+                <!-- Left Section -->
+                <div class="form-column">
+                    <fieldset>
+                        <legend>Personal Information</legend>
+                        <label for="customerName">Customer Name:</label>
+                        <input type="text" id="customerName" maxlength="50" placeholder="Enter Customer Name" required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" placeholder="Enter Email" required>
+
+                        <label for="mobile">Mobile Number:</label>
+                        <div class="mobile-group">
+                            <select id="countryCode">
+                                <option value="+1" data-flag="us">+1 (USA)</option>
+                                <option value="+91" data-flag="in">+91 (India)</option>
+                                <option value="+44" data-flag="gb">+44 (UK)</option>
+                                <option value="+61" data-flag="au">+61 (Australia)</option>
+                                <!-- Add other country options here -->
+                            </select>
+                            <input type="text" id="mobileNumber" maxlength="10" placeholder="Enter 10-digit number" required>
+                        </div>
+
+                        <label for="address">Address:</label>
+                        <textarea id="address" rows="3" placeholder="Enter your complete address" required></textarea>
+                    </fieldset>
+                </div>
+
+                <!-- Right Section -->
+                <div class="form-column">
+                    <fieldset>
+                        <legend>Username and Password</legend>
+                        <label for="userID">User ID:</label>
+                        <input type="text" id="userID" minlength="5" maxlength="20" placeholder="Enter User ID" required>
+
+                        <label for="password">Password:</label>
+                        <input type="password" id="password" minlength="8" placeholder="Enter Password" required>
+
+                        <label for="confirmPassword">Confirm Password:</label>
+                        <input type="password" id="confirmPassword" minlength="8" placeholder="Confirm Password" required>
+                    </fieldset>
+
+                <div class="done-reg">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="isAdmin">
+                        <label for="isAdmin">Register as Admin</label>
+                    </div>
+                    
+                    <button type="submit">Register</button>
+                </div>
+              
+                    
+                </div>
+            </div>
+        </form>
+
+        <div class="acknowledgment" id="acknowledgment" style="display: none;">
+            <h3 style="color: green;">Consumer Registration Successful.</h3>
+            <p><strong>Customer Username:</strong> <span id="ackUserID"></span></p>
+            <p><strong>Customer Name:</strong> <span id="ackName"></span></p>
+            <p><strong>Email:</strong> <span id="ackEmail"></span></p>
+        </div>
+
+        <!-- Back to Home Link -->
+        <div class="back-to-home">
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+    <script src="../js/registerscript.js"></script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Screen</title>
+    <link rel="stylesheet" href="../css/login.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <label for="username">User ID:</label>
+            <input type="text" id="username" placeholder="Enter User ID" minlength="5" maxlength="20" required>
+            <span class="error-message" id="usernameError">User ID must be between 5 and 20 characters.</span>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter Password" required>
+            <span class="error-message" id="passwordError">
+                Password must be at least 8 characters, include an uppercase, lowercase, and a special character.
+            </span>
+            
+            <button type="submit">Login</button>
+        </form>
+
+        <!-- Back to Home Link -->
+        <div class="back-to-home">
+            <a href="index.html">Back to Home</a>
+        </div>
+    </div>
+
+    <script src="../js/loginscript.js"></script>
+</body>
+</html>

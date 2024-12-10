@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+    <link rel="stylesheet" href="../css/customer_dashboard.css">
+</head>
+<body>
+    <div class="topbar">
+        <div class="topbar-left">
+            <button id="homeButton" onclick="redirectToHome()">Home</button>
+            <button id="bookingButton" onclick="redirectToBooking()">Booking Service</button>
+            <button id="trackingButton" onclick="redirectToTracking()">Tracking</button>
+            <button id="previousBookingButton" onclick="redirectToPreviousBooking()">Previous Booking</button>
+            <button id="contactSupportButton" onclick="redirectToSupport()">Contact Support</button>
+        </div>
+        <div class="topbar-right">
+            <span id="welcomeMessage">Welcome, <span id="usernameDisplay"></span></span>
+            <button id="logoutButton" onclick="logout()">Logout</button>
+        </div>
+    </div>
+
+    <div class="content">
+        <h2>Welcome to Your Dashboard!</h2>
+        <p>Here you can manage your bookings and access various services.</p>
+    </div>
+
+    <script src="../js/customer_home.js"></script>
+</body>
+</html>
