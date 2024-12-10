@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    background-color: #007bff;
+    color: white;
+    padding: 30px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.topbar-left {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    background-color: #ffffff;
+    color: #007bff;
+    border: none;
+    padding: 8px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.topbar-right {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-right: 40px;
+}
+
+#welcomeMessage {
+    font-size: 18px;
+}
+
+#usernameDisplay {
+    font-weight: bold;
+}
+
+.content {
+    margin-top: 70px; /* Give space to top bar */
+    padding: 20px;
+    text-align: center;
+}

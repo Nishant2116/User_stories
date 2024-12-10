@@ -1,0 +1,113 @@
+/* General Body Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #6a11cb, #2575fc);
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Login Container */
+.login-container {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.15);
+    width: 350px;
+    text-align: center;
+}
+
+/* Heading */
+h2 {
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Labels and Inputs */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    text-align: left;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+input:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* Error Message */
+.error-message {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-bottom: 10px;
+    display: none;
+}
+
+/* Button Styling */
+button {
+    width: 100%;
+    padding: 12px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* Animation and Transitions */
+input, button {
+    transition: all 0.3s ease;
+}
+
+/* Login Container Hover Effect */
+.login-container:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .login-container {
+        width: 90%;
+        padding: 20px;
+    }
+}
+
+
+/* Back to Home Link Styling */
+.back-to-home {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.back-to-home a {
+    font-size: 16px;
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.back-to-home a:hover {
+    color: #0056b3;
+}
